@@ -6,7 +6,7 @@ const projects = [
     title: "まるごと祭",
     category: "Event / Graphic Design",
     year: "2026",
-    image: "work-marugoto.png",
+    image: "work-marugoto-kirin.png",
     gallery: [],
     description: "地域の魅力をひとつの体験として届けるイベントです。キービジュアルを中心に、会場へ足を運ぶ前から楽しさと勢いが伝わる表現を設計しました。イベントの空気感を山・川・文字の強いシルエットへ整理し、小さな画面でも認識できる色面と文字のバランスを検証しました。コンセプト設計、グラフィックデザイン、イベント企画を担当しています。",
   },
