@@ -4,29 +4,32 @@ const projects = [
   {
     slug: "marugoto-festival",
     title: "まるごと祭",
+    filter: "Event",
     category: "Event / Graphic Design",
     year: "2026",
     image: "work-marugoto-kirin.png",
     gallery: [],
-    description: "神山まるごと高専の学園祭「まるごと祭 つくることは、いきること。2026」の実行委員長として、全体の統括とディレクションをしています。デザイン面では、ロゴやKVのクリエイティブディレクション、SNSアイコンやクラウドファンディングの表紙などを担当しています。今年の世界観である「小さな社会、もう一つの未来」を表現できるよう、手作り感のある、あえていびつで違和感のあるデザインを一貫して守っています。",
+    description: "神山まるごと高専の学園祭「まるごと祭 つくることは、いきること。2026」の実行委員長として、全体の統括とディレクションをしています。デザイン面では、ロゴやKVのクリエイティブディレクション、SNSアイコンやクラウドファンディングの表紙などを担当しています。今年の世界観である「小さな社会、もう一つの未来」を表現できるよう、手作り感のある、あえていびつで違和感のあるデザインを一貫して守っています。この活動を通して、個別の制作物だけでなく、企画全体を俯瞰しながら複数の表現に一貫した世界観を通すディレクションを学んでいます。",
   },
   {
     slug: "tie",
     title: "ネクタイ",
+    filter: "Fashion",
     category: "Fashion / Graphic Design",
     year: "2025",
     image: "work-fashion.png",
     gallery: ["tie-detail-01.png", "tie-detail-02.png"],
-    description: "友達の誕生日のために作ったデザインです。彼女の1年の経験や成長、そして未来に向けた輝きをデザインしました。コンセプトは「落ちる」。上がる原動力として、人間には落ちることがきっかけになる瞬間があります。それでも進み続ける人生。そんなアップダウンをネクタイという細長いキャンバスに表現し、彼女の未来の自信となる材料になればと思い、デザインしました。",
+    description: "友達の誕生日のために作ったデザインです。彼女の1年の経験や成長、そして未来に向けた輝きをデザインしました。コンセプトは「落ちる」。上がる原動力として、人間には落ちることがきっかけになる瞬間があります。それでも進み続ける人生。そんなアップダウンをネクタイという細長いキャンバスに表現し、彼女の未来の自信となる材料になればと思い、デザインしました。相手の経験を聞き取り、言葉にしにくい人生の動きを、身につけられる図案へ変換する方法を学びました。",
   },
   {
     slug: "frc",
     title: "FRC",
+    filter: "Robotics",
     category: "Robotics / Engineering",
     year: "2024",
     image: "work-robotics.png",
     gallery: ["frc-detail-01.jpg", "frc-detail-02.jpg"],
-    description: "戦略、概念設計、全体設計、機構設計、発注、組み立てまで、すべて自分で作ったロボットです。予算や渡航を考慮した設計、実戦を想定した部品や素材の選定など、線ではなく面として捉え、設計していくデザインです。",
+    description: "戦略、概念設計、全体設計、機構設計、発注、組み立てまで、すべて自分で作ったロボットです。予算や渡航を考慮した設計、実戦を想定した部品や素材の選定など、線ではなく面として捉え、設計していくデザインです。予算、輸送、製作性、競技での動作を同時に捉え、複数の制約を設計判断へつなげる重要性を学びました。",
   },
 ];
 
@@ -110,12 +113,20 @@ function SubHeader() {
 }
 
 function Works() {
+  const [filter, setFilter] = useState("All");
+  const visibleProjects = filter === "All" ? projects : projects.filter((project) => project.filter === filter);
+
   return (
     <main className="sub-page">
       <SubHeader />
       <section className="index-title"><p>All projects</p><h1>WORKS</h1></section>
+      <nav className="works-filters" aria-label="作品カテゴリー">
+        {["All", "Event", "Fashion", "Robotics"].map((item) => (
+          <button className={filter === item ? "is-active" : ""} onClick={() => setFilter(item)} key={item} aria-pressed={filter === item}>{item}</button>
+        ))}
+      </nav>
       <section className="works-grid">
-        {projects.map((project) => <article key={project.slug}><ProjectImage project={project} /><h2>{project.title}</h2><p>{project.category} / {project.year}</p></article>)}
+        {visibleProjects.map((project) => <article key={project.slug}><ProjectImage project={project} /><h2>{project.title}</h2><p>{project.category} / {project.year}</p></article>)}
       </section>
     </main>
   );
