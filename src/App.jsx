@@ -11,7 +11,12 @@ const projects = [
     gallery: [],
     description: "神山まるごと高専の学園祭「まるごと祭 つくることは、いきること。2026」の実行委員長として、全体の統括とディレクションをしています。デザイン面では、ロゴやKVのクリエイティブディレクション、SNSアイコンやクラウドファンディングの表紙などを担当しています。今年の世界観である「小さな社会、もう一つの未来」を表現できるよう、手作り感のある、あえていびつで違和感のあるデザインを一貫して守っています。この活動を通して、個別の制作物だけでなく、企画全体を俯瞰しながら複数の表現に一貫した世界観を通すディレクションを学んでいます。",
   },
-  {
+  {友達の誕生日のために作ったデザインです。いろいろな人に愛されてきた彼女の1年間の経験や成長、そして未来に向けた輝きを表現しました。コンセプトは「2つの落ちる」。人間には、落ちることが再び上がる原動力になる瞬間があります。それでも進み続ける人生。そんなアップダウンを、ネクタイという細<form action="https://formsubmit.co/kmc2441@kamiyama.ac.jp" method="post">
+            <input type="hidden" name="_subject" value="ポートフォリオサイトからのお問い合わせ" />
+            <input type="hidden" name="_template" value="table" />
+            <input type="hidden" name="_captcha" value="false" />
+            <input type="hidden" name="_next" value="https://kmcsena.github.io/portforio/?sent=1#contact" />
+            <input className="contact-honey" type="text" name="_honey" tabIndex="-1" autoComplete="off" aria-hidden="true" />長いキャンバスに表現しました。このネクタイが、彼女の未来の一部になればいいなと思い、デザインしました。
     slug: "tie",
     title: "ネクタイ",
     filter: "Fashion",
