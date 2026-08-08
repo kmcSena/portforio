@@ -19,7 +19,7 @@ const projects = [
     year: "2025",
     image: "work-fashion.png",
     gallery: ["tie-detail-01.png", "tie-detail-02.png"],
-    description: "友達の誕生日のために作ったデザインです。彼女の1年の経験や成長、そして未来に向けた輝きをデザインしました。コンセプトは「落ちる」。上がる原動力として、人間には落ちることがきっかけになる瞬間があります。それでも進み続ける人生。そんなアップダウンをネクタイという細長いキャンバスに表現し、彼女の未来の自信となる材料になればと思い、デザインしました。相手の経験を聞き取り、言葉にしにくい人生の動きを、身につけられる図案へ変換する方法を学びました。",
+    description: "友達の誕生日のために作ったデザインです。いろいろな人に愛されてきた彼女の1年間の経験や成長、そして未来に向けた輝きを表現しました。コンセプトは「2つの落ちる」。人間には、落ちることが再び上がる原動力になる瞬間があります。それでも進み続ける人生。そんなアップダウンを、ネクタイという細長いキャンバスに表現しました。このネクタイが、彼女の未来の一部になればいいなと思い、デザインしました。",
   },
   {
     slug: "frc",
@@ -96,7 +96,12 @@ function Home() {
         <div className="section-heading"><span /><h2>contact</h2><span /></div>
         <div className="contact-content">
           <p>制作のご相談やプロジェクトのご依頼など、<br />お気軽にご連絡ください。</p>
-          <form action="mailto:" method="post" encType="text/plain">
+          <form action="https://formsubmit.co/kmc2441@kamiyama.ac.jp" method="post">
+            <input type="hidden" name="_subject" value="ポートフォリオサイトからのお問い合わせ" />
+            <input type="hidden" name="_template" value="table" />
+            <input type="hidden" name="_captcha" value="false" />
+            <input type="hidden" name="_next" value="https://kmcsena.github.io/portforio/?sent=1#contact" />
+            <input className="contact-honey" type="text" name="_honey" tabIndex="-1" autoComplete="off" aria-hidden="true" />
             <label><span>Name</span><input name="name" required /></label>
             <label><span>Email</span><input name="email" type="email" required /></label>
             <label><span>Message</span><textarea name="message" rows="4" required /></label>
