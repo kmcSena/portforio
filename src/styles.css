@@ -11,7 +11,8 @@ img { display: block; max-width: 100%; }
 .home-page { position: relative; min-height: 276vw; overflow: hidden; background: url("/portforio/pdf-background.png") center top / 100% 100% no-repeat #2733ff; }
 .site-header, .sub-header { position: absolute; z-index: 20; top: 2.2vw; left: var(--gutter); right: var(--gutter); display: flex; align-items: center; justify-content: space-between; }
 .wordmark, .sub-header button:first-child { width: 8vw; min-width: 80px; height: 44px; padding: 0; overflow: hidden; }
-.wordmark img, .sub-header button:first-child img { width: 100%; height: 100%; object-fit: contain; transform: scale(2.7); }
+.wordmark img, .sub-header button:first-child img { width: 100%.contact-honey { position: absolute; left: -9999px; width: 1px; height: 1px; opacity: 0; pointer-events: none; }
+form button {; height: 100%; object-fit: contain; transform: scale(2.7); }
 .site-header nav { display: flex; gap: 4vw; }
 .site-header a { color: inherit; text-decoration: none; font-size: clamp(15px,1.35vw,21px); }
 
